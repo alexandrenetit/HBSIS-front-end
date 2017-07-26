@@ -1,0 +1,50 @@
+<div class="container main-container">
+  <h2>Lista de Clientes</h2>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="pull-left">
+        <a class="btn btn-primary" id="novoCliente" [routerLink]="['/clientes/novo']">
+          <span title="Novo Cliente" class="glyphicon glyphicon-plus-sign"></span> Novo Evento
+        </a>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class='text-danger' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+  <div class="page-size">
+    <div class="panel panel-default">
+      <table class="table table-striped" *ngIf='clientes && clientes.length'>
+        <thead>
+        <tr>
+          <th class="col-md-6">Nome</th>
+          <th class="col-md-2">CPF/CNPJ</th>
+          <th class="col-md-2">Telefone</th>
+          <th class="col-md-2"></th>
+        </tr>
+        </thead>
+        <tbody>
+       <tr *ngFor='let cliente of clientes'>
+          <td>{{ cliente.nome }}</td>
+          <td>{{ cliente.cpfCnpj }}</td>
+          <td>{{ cliente.telefone }}</td>
+          <td>
+            <div class="col-md-4">
+              <a [routerLink]="['/clientes/editar/', cliente.id]" title="Editar" class="btn btn-primary">
+                <span class="glyphicon glyphicon-edit"></span>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a [routerLink]="['/clientes/excluir/', cliente.id]" title="Remover" class="btn btn-danger">
+                <span class="glyphicon glyphicon-remove"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
