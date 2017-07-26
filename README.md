@@ -31,9 +31,9 @@
 
 ### Para acessar o site basta digitar no browser qualquer URL abaixo: 
 
-http://192.168.2.1:8080
-http://192.168.230.1:8080
-http://10.0.1.102:8080
-http://127.0.0.1:8080
+- http://192.168.2.1:8080
+- http://192.168.230.1:8080
+- http://10.0.1.102:8080
+- http://127.0.0.1:8080
 
 #### Em caso de dúvidas mandar e-mail para: alexandre.netit@gmail.com
